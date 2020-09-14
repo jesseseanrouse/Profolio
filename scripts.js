@@ -1,0 +1,1 @@
+let sheetAsJSON = https://spreadsheets.google.com/feeds/list/1Gy2RhQ_KJXX7U8FUJi-GXtvBNQlWTj140rriT0dlnDY/edit?usp=sharing/od6/public/values?alt=json
