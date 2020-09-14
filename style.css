@@ -1,0 +1,30 @@
+/* Going with the mobile design first */
+body {
+    text-align: center;
+    margin: 0px;
+}
+/* Header Settings */
+header{
+    /* Want to auto set the header to fill a phone screen but I'm going to put that off till I have more time. For now I'm going to assuming 600px for height of phone. */
+    background-image: url("https://i.imgur.com/xs43N1N.jpg");
+    background-repeat: no-repeat;
+    background-size: 190%;
+    background-position: center -100px;
+    font-family: 'MedievalSharp', cursive;
+    padding: 375px 0px 125px 0px;
+    color: white;
+}
+h1 {
+    font-size: 40px;
+}
+/* Nav Bar Settings */
+nav {
+    /* Color background needs work */
+    /* Tried picking from background but I think I need be very fancy for this to work */
+    background-color: #66696b;
+    padding: 5px 10px;
+    /* Icon Settings */
+    font-size: 45px;
+    text-align: right;
+    color: white;
+}
