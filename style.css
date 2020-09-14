@@ -58,3 +58,9 @@ nav {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
 }
+/* Project Settings */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
