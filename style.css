@@ -59,8 +59,39 @@ nav {
     grid-row: 1 / 2;
 }
 /* Project Settings */
+.pHeader {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #b7c5ef;
+    padding: 17px;
+}
 ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+}
+li {
+    background-color: #66696b;
+    padding: 3px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+}
+img {
+    width: 90%;
+}
+/* Contact Me Settings */
+.contact {
+    background-color: #66696b;
+}
+.cHeader {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #b7c5ef;
+    padding: 17px;
+}
+/* needs more content */
+.contactInfo {
+    padding: 1px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
