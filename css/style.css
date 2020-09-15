@@ -6,6 +6,7 @@ body {
 h2{
     margin: 0px;
     font-family: 'MedievalSharp', cursive;
+    color: white;
 }
 /* Header Settings */
 .mainHeader{
@@ -30,6 +31,12 @@ nav {
     font-size: 45px;
     text-align: right;
     color: white;
+    /* This is for nav functionality for sticking to top of screen */
+    position: sticky;
+    /* Given I don't care about covering my beautiful face I just set it to top 0 without other edits */
+    top: 0px;
+    /* I need the bar to stretch the screen */
+    width: 100%;
 }
 i {
     padding: 5px 10px;
@@ -39,6 +46,22 @@ i {
     background-color: #3f4142;
     flex-direction: column;
     align-items: center;
+}
+/* I looked this up... Took way too long to find this but it solved my nav bar location issue when jumping around my page */
+#aboutMeLink {
+    position: relative;
+    top: -54px;
+    visibility: hidden;
+}
+#projectsLink {
+    position: relative;
+    top: -54px;
+    visibility: hidden;
+}
+#contactLink {
+    position: relative;
+    top: -54px;
+    visibility: hidden;
 }
 /* Figured out that I needed place these settings here instead of above */
 a{
