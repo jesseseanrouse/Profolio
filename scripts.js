@@ -3,18 +3,27 @@
 
 
 // So I can see the array
-// const createArr = (projectsArr) => {
-//     console.log(projectsArr)
-// }
+const viewArr = (array) => {
+    console.log(array)
+}
 
+// My attempt to create an array that sticks beyond the function
+// var googleArr = []
+
+// This took longer than I thought but oddly enough it had little to do with set backs just very time consuming to get done.
 const addProject2Index = (projectsArr) => {
-	let i = 0;
-	while (i < projectsArr.length) {
+    let i = 0;
+    while (i < projectsArr.length) {
+	// while (i < projectsArr.length) {
+		$('.projectList').append('<li>' + '</li>');
 		let title = projectsArr[i].title;
-        $('.projectList').append('<li>' + title + '</li>');
-        let $img = $('<img>');
-        $img.attr('src', projectsArr[i].image)
-        $('.projectList').append($img);
+		$('li').append(title);
+		let $img = $('<img>');
+		$img.attr('src', projectsArr[i].image)
+		$('li').append($img);
+		// $($img).on('click', () => {
+		//     window.location = projectsArr[i].link
+		// })
 		i++;
 	}
 };
@@ -25,17 +34,17 @@ $.ajax({
         // so I can play find the path
         // console.log(sheet)
         // following the Joe's repo to do this
-        const projects = sheet.feed.entry.map(projects =>{
+        const project = sheet.feed.entry.map(project =>{
             return {
-                title: projects.gsx$title.$t,
-                link: projects.gsx$link.$t,
-                description: projects.gsx$description.$t,
-                image: projects.gsx$image.$t
+                title: project.gsx$title.$t,
+                link: project.gsx$link.$t,
+                description: project.gsx$description.$t,
+                image: project.gsx$image.$t
             }
         })
 
-        // createArr(projects)
-        addProject2Index(projects);
+        // viewArr(project)
+        addProject2Index(project);
 	}
 );
 
@@ -53,3 +62,5 @@ $('a').on('click', () => {
     let menu = document.getElementById("navLinks")
     menu.style.display = "none"
 })
+
+// viewArr(googleArr);
