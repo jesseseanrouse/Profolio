@@ -1,0 +1,25 @@
+@media screen and (min-width: 1023px) {
+    /* Header Settings */
+    .mainHeader {
+        background-image: url("https://i.imgur.com/xs43N1N.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center -180px;
+        padding: 425px 0px 50px 0px;
+    }
+    /* Nav Bar Settings */
+    .navIcon {
+        display: none;
+    }
+    #navLinks {
+        display: flex;
+        justify-content: space-around;
+        background-color: #66696b;
+        flex-direction: row;
+        align-items: center;
+}
+    /* Projects Settings */
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

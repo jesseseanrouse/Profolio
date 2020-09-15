@@ -63,9 +63,13 @@ $('i').on('click', () => {
     }
 });
 // Wanted a little more functionality for the nav button
+// works as intended however a little wonky if used in developer mode because x is read for the loading of site and not when you change it
 $('a').on('click', () => {
     let menu = document.getElementById("navLinks")
-    menu.style.display = "none"
+    let x = screen.width;
+    if (x < 500) {
+        menu.style.display = "none"
+    }
 })
 
 // viewArr(googleArr);
