@@ -20,12 +20,21 @@
     </header>
     <nav>
         <i class="fab fa-jedi-order"></i>
+        <!-- Went to w3schools to figure out how to do make a menu on the nav icon-->
+        <!-- learned how to make the links work from Ginny Mineo blog on hubspot -->
+        <div id="navLinks">
+            <a href="#aboutMeLink">About Me</a>
+            <a href="#projectsLink">Projects</a>
+            <a href="#contactLink">Contact Me</a>
+        </div>
     </nav>
-    <article class=aboutMe>
+    <article id=aboutMe>
         <!-- Need to add information about strengths -->
-        <header class=amh>
-            <h2>About Me</h2>
-        </header>
+        <a id="aboutMeLink">
+            <header class=amh>  
+                <h2>About Me</h2>
+            </header>
+        </a>
         <main class=amMain>
             <div class=am1>
                 <h3>Location</h3>
@@ -41,12 +50,16 @@
             </div>
         </main>
     </article>
-    <article class=projects>
-        <h2 class=pHeader>Projects</h2>
+    <article id=projects>
+        <a id="projectsLink">
+            <h2 class=pHeader>Projects</h2>
+        </a>
         <ul class=projectList></ul>
     </article>
-    <article class=contact>
-        <h2 class=cHeader>Contact Me</h2>
+    <article id=contact>
+        <a id="contactLink">
+            <h2 class=cHeader>Contact Me</h2>
+        </a>    
         <div class=contactInfo>
             <p>jesseseanrouse@gmail.com</p>
         </div>

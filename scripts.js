@@ -38,3 +38,18 @@ $.ajax({
         addProject2Index(projects);
 	}
 );
+
+// w3schools format decided to go with it.
+$('i').on('click', () => {
+    let menu = document.getElementById("navLinks")
+    if (menu.style.display === "flex") {
+        menu.style.display = "none"
+    } else {
+        menu.style.display = "flex"
+    }
+});
+// Wanted a little more functionality for the nav button
+$('a').on('click', () => {
+    let menu = document.getElementById("navLinks")
+    menu.style.display = "none"
+})

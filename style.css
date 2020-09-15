@@ -26,10 +26,23 @@ nav {
     /* Color background needs work */
     /* Tried picking from background but I think I need be very fancy for this to work */
     background-color: #66696b;
-    padding: 5px 10px;
     /* Icon Settings */
     font-size: 45px;
     text-align: right;
+    color: white;
+}
+i {
+    padding: 5px 10px;
+}
+#navLinks {
+    display: none;
+    background-color: #3f4142;
+    flex-direction: column;
+    align-items: center;
+}
+/* Figured out that I needed place these settings here instead of above */
+a{
+    text-decoration: none;
     color: white;
 }
 /* About Me Settings */
@@ -80,7 +93,7 @@ img {
     width: 90%;
 }
 /* Contact Me Settings */
-.contact {
+#contact {
     background-color: #66696b;
 }
 .cHeader {
