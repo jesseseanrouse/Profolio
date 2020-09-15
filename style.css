@@ -83,11 +83,26 @@ ul {
     padding: 0px;
 }
 li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li header {
     background-color: #66696b;
     padding: 3px;
     font-size: 20px;
     color: white;
     letter-spacing: 1px;
+    align-self: stretch;
+}
+li a {
+    /* Pick from my hair */
+    background-color: #a58d6f;
+    padding: 3px;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+    align-self: stretch;
 }
 img {
     width: 90%;

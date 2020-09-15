@@ -15,15 +15,20 @@ const addProject2Index = (projectsArr) => {
     let i = 0;
     while (i < projectsArr.length) {
 	// while (i < projectsArr.length) {
-		$('.projectList').append('<li>' + '</li>');
+        $('.projectList').append('<li>' + '</li>');
+        let n = i + 1
 		let title = projectsArr[i].title;
-		$('li').append(title);
+		$(`li:nth-of-type(${n})`).append('<header>' + title + '</header>');
 		let $img = $('<img>');
-		$img.attr('src', projectsArr[i].image)
-		$('li').append($img);
+		$img.attr('src', projectsArr[i].image);
+        $(`li:nth-of-type(${n})`).append($img);
+        //don't need this now or ever leaving for reference
 		// $($img).on('click', () => {
 		//     window.location = projectsArr[i].link
-		// })
+        // })
+        // Got this working!!!!!!!!!!
+        let link = projectsArr[i].link;
+		$(`li:nth-of-type(${n})`).append(`<a href="${link}">Go to Site</a>`);
 		i++;
 	}
 };
