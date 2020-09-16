@@ -22,4 +22,7 @@
     ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    li {
+        grid-row: 1 / 2;
+    }
 }

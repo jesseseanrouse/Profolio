@@ -149,6 +149,22 @@ $('.prevCara').on('click', () => {
 			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
 		}
 	} else {
+        if (carousel === 1) {
+            carousel = 2
+            $(`li:nth-of-type(1)`).css('grid-column', '3 / 4');
+            $(`li:nth-of-type(2)`).css('grid-column', '1 / 2');
+            $(`li:nth-of-type(3)`).css('grid-column', '2 / 3');
+        } else if (carousel === 2) {
+            carousel = 3;
+			$(`li:nth-of-type(1)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(2)`).css('grid-column', '3 / 4');
+			$(`li:nth-of-type(3)`).css('grid-column', '1 / 2');
+        } else if (carousel === 3) {
+            carousel = 1;
+			$(`li:nth-of-type(1)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(2)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(3)`).css('grid-column', '3 / 4');
+        }
 	}
     
 })
@@ -207,5 +223,21 @@ $('.nextCara').on('click', () => {
 			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
 		}
     } else {
+        if (carousel === 1) {
+			carousel = 3;
+			$(`li:nth-of-type(1)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(2)`).css('grid-column', '3 / 4');
+			$(`li:nth-of-type(3)`).css('grid-column', '1 / 2');
+		} else if (carousel === 2) {
+			carousel = 1;
+			$(`li:nth-of-type(1)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(2)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(3)`).css('grid-column', '3 / 4');
+		} else if (carousel === 3) {
+			carousel = 2;
+			$(`li:nth-of-type(1)`).css('grid-column', '3 / 4');
+			$(`li:nth-of-type(2)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(3)`).css('grid-column', '2 / 3');
+		}
     }
 });
