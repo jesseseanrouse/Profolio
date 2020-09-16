@@ -117,6 +117,37 @@ $('.prevCara').on('click', () => {
 			$(`li:nth-of-type(2)`).css('align-items', 'center');
 		}
 	} else if (x < 1023) {
+         if (carousel === 1) {
+			carousel = 3;
+			$(`li:nth-of-type(1)`).css('display', 'none'),
+			$(`li:nth-of-type(2)`).css('display', 'flex');
+			$(`li:nth-of-type(2)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(2)`).css('align-items', 'center');
+			$(`li:nth-of-type(3)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(2)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(2)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(3)`).css('grid-row', '1 / 2');
+		} else if (carousel === 2) {
+			carousel = 1;
+			$(`li:nth-of-type(2)`).css('display', 'none');
+			$(`li:nth-of-type(3)`).css('display', 'flex');
+			$(`li:nth-of-type(3)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(3)`).css('align-items', 'center');
+			$(`li:nth-of-type(1)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(3)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(3)`).css('grid-row', '1 / 2');
+		} else if (carousel === 3) {
+			carousel = 2;
+			$(`li:nth-of-type(3)`).css('display', 'none'),
+			$(`li:nth-of-type(1)`).css('display', 'flex');
+			$(`li:nth-of-type(1)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(1)`).css('align-items', 'center');
+			$(`li:nth-of-type(2)`).css('grid-column', '1 / 2');
+			$(`li:nth-of-type(1)`).css('grid-column', '2 / 3');
+			$(`li:nth-of-type(2)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
+		}
 	} else {
 	}
     
@@ -144,8 +175,37 @@ $('.nextCara').on('click', () => {
 		    $(`li:nth-of-type(1)`).css('align-items', 'center');
         }
     } else if (x < 1023) {
-
+        if (carousel === 1) {
+			carousel = 2;
+			$(`li:nth-of-type(3)`).css('display', 'none'),
+			$(`li:nth-of-type(2)`).css('display', 'flex');
+			$(`li:nth-of-type(2)`).css('flex-direction', 'column');
+            $(`li:nth-of-type(2)`).css('align-items', 'center');
+            $(`li:nth-of-type(2)`).css('grid-column', '1 / 2');
+            $(`li:nth-of-type(1)`).css('grid-column', '2 / 3');
+            $(`li:nth-of-type(2)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
+		} else if (carousel === 2) {
+			carousel = 3;
+			$(`li:nth-of-type(1)`).css('display', 'none');
+			$(`li:nth-of-type(3)`).css('display', 'flex');
+			$(`li:nth-of-type(3)`).css('flex-direction', 'column');
+            $(`li:nth-of-type(3)`).css('align-items', 'center');
+            $(`li:nth-of-type(3)`).css('grid-column', '1 / 2');
+            $(`li:nth-of-type(2)`).css('grid-column', '2 / 3');
+            $(`li:nth-of-type(2)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(3)`).css('grid-row', '1 / 2');
+		} else if (carousel === 3) {
+			carousel = 1;
+			$(`li:nth-of-type(2)`).css('display', 'none'),
+			$(`li:nth-of-type(1)`).css('display', 'flex');
+			$(`li:nth-of-type(1)`).css('flex-direction', 'column');
+            $(`li:nth-of-type(1)`).css('align-items', 'center');
+            $(`li:nth-of-type(1)`).css('grid-column', '1 / 2');
+            $(`li:nth-of-type(3)`).css('grid-column', '2 / 3');
+            $(`li:nth-of-type(3)`).css('grid-row', '1 / 2');
+			$(`li:nth-of-type(1)`).css('grid-row', '1 / 2');
+		}
     } else {
-
     }
 });
