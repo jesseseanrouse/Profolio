@@ -9,9 +9,20 @@ const viewArr = (array) => {
 // To start the carousel
 let carousel = 1;
 const caraStart = () => {
+    let x = screen.width;
     $(`li:nth-of-type(1)`).css('display', 'flex');
     $(`li:nth-of-type(1)`).css('flex-direction', 'column');
     $(`li:nth-of-type(1)`).css('align-items', 'center');
+    if (x > 500) {
+        $(`li:nth-of-type(3)`).css('display', 'flex');
+		$(`li:nth-of-type(3)`).css('flex-direction', 'column');
+        $(`li:nth-of-type(3)`).css('align-items', 'center');
+        if (x > 1023) {
+            $(`li:nth-of-type(2)`).css('display', 'flex');
+			$(`li:nth-of-type(2)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(2)`).css('align-items', 'center');
+        }
+    }
 }
 
 // My attempt to create an array that sticks beyond the function
@@ -84,44 +95,57 @@ $('a').on('click', () => {
 
 // Carousel Javascript
 $('.prevCara').on('click', () => {
-    if (carousel === 1) {
-        carousel = 3;
-        $(`li:nth-of-type(1)`).css('display', 'none');
-        $(`li:nth-of-type(3)`).css('display', 'flex');
-        $(`li:nth-of-type(3)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(3)`).css('align-items', 'center');
-    } else if (carousel === 2) {
-        carousel = 1;
-		$(`li:nth-of-type(2)`).css('display', 'none'),
-        $(`li:nth-of-type(1)`).css('display', 'flex');
-        $(`li:nth-of-type(1)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(1)`).css('align-items', 'center');
-    } else if (carousel === 3) {
-        carousel = 2;
-        $(`li:nth-of-type(3)`).css('display', 'none'),
-        $(`li:nth-of-type(2)`).css('display', 'flex');
-        $(`li:nth-of-type(2)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(2)`).css('align-items', 'center');
-    }
+    let x = screen.width;
+    if (x < 500) {
+		if (carousel === 1) {
+			carousel = 3;
+			$(`li:nth-of-type(1)`).css('display', 'none');
+			$(`li:nth-of-type(3)`).css('display', 'flex');
+			$(`li:nth-of-type(3)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(3)`).css('align-items', 'center');
+		} else if (carousel === 2) {
+			carousel = 1;
+			$(`li:nth-of-type(2)`).css('display', 'none'),
+			$(`li:nth-of-type(1)`).css('display', 'flex');
+			$(`li:nth-of-type(1)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(1)`).css('align-items', 'center');
+		} else if (carousel === 3) {
+			carousel = 2;
+			$(`li:nth-of-type(3)`).css('display', 'none'),
+			$(`li:nth-of-type(2)`).css('display', 'flex');
+			$(`li:nth-of-type(2)`).css('flex-direction', 'column');
+			$(`li:nth-of-type(2)`).css('align-items', 'center');
+		}
+	} else if (x < 1023) {
+	} else {
+	}
+    
 })
 $('.nextCara').on('click', () => {
-    if (carousel === 1) {
-        carousel = 2;
-        $(`li:nth-of-type(1)`).css('display', 'none'),
-		$(`li:nth-of-type(2)`).css('display', 'flex');
-		$(`li:nth-of-type(2)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(2)`).css('align-items', 'center');
-	} else if (carousel === 2) {
-        carousel = 3;
-        $(`li:nth-of-type(2)`).css('display', 'none');
-		$(`li:nth-of-type(3)`).css('display', 'flex');
-		$(`li:nth-of-type(3)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(3)`).css('align-items', 'center');
-	} else if (carousel === 3) {
-        carousel = 1;
-        $(`li:nth-of-type(3)`).css('display', 'none'),
-		$(`li:nth-of-type(1)`).css('display', 'flex');
-		$(`li:nth-of-type(1)`).css('flex-direction', 'column');
-		$(`li:nth-of-type(1)`).css('align-items', 'center');
-	}
+    let x = screen.width;
+    if (x < 500) {
+        if (carousel === 1) {
+            carousel = 2;
+            $(`li:nth-of-type(1)`).css('display', 'none'),
+		    $(`li:nth-of-type(2)`).css('display', 'flex');
+		    $(`li:nth-of-type(2)`).css('flex-direction', 'column');
+		    $(`li:nth-of-type(2)`).css('align-items', 'center');
+	    } else if (carousel === 2) {
+            carousel = 3;
+            $(`li:nth-of-type(2)`).css('display', 'none');
+		    $(`li:nth-of-type(3)`).css('display', 'flex');
+		    $(`li:nth-of-type(3)`).css('flex-direction', 'column');
+		    $(`li:nth-of-type(3)`).css('align-items', 'center');
+	    } else if (carousel === 3) {
+            carousel = 1;
+            $(`li:nth-of-type(3)`).css('display', 'none'),
+		    $(`li:nth-of-type(1)`).css('display', 'flex');
+		    $(`li:nth-of-type(1)`).css('flex-direction', 'column');
+		    $(`li:nth-of-type(1)`).css('align-items', 'center');
+        }
+    } else if (x < 1023) {
+
+    } else {
+
+    }
 });
