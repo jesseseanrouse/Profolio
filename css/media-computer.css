@@ -17,8 +17,11 @@
         background-color: #66696b;
         flex-direction: row;
         align-items: center;
-}
+    }
     /* Projects Settings */
+    .carouselEle {
+        grid-template-columns: .1fr 1fr .1fr;
+    }
     ul {
         grid-template-columns: 1fr 1fr 1fr;
     }

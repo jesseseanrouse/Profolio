@@ -19,6 +19,9 @@
         align-items: center;
 }
     /* Projects Settings */
+    .carouselEle {
+        grid-template-columns: .2fr 1fr .2fr;
+    }
     ul {
         grid-template-columns: 1fr 1fr;
     }
