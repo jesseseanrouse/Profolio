@@ -145,10 +145,28 @@ img {
     background-color: #b7c5ef;
     padding: 17px;
 }
-/* needs more content */
 .contactInfo {
     padding: 1px;
     color: white;
     font-size: 20px;
     letter-spacing: 1px;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+}
+form input {
+    grid-column: 2 / 4;
+}
+#messagePerson {
+    grid-row: 5 / 7;
+}
+form input:nth-of-type(4){
+   grid-column: 3 / 4; 
+}
+#contact p {
+    color: white;
+    letter-spacing: 1px;
+    grid-column: 1 / 2;
 }

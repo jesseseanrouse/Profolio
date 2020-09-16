@@ -241,3 +241,7 @@ $('.nextCara').on('click', () => {
 		}
     }
 });
+// Input Email
+$('form').on('submit', (event) => {
+    event.preventDefault()
+})
