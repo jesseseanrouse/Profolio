@@ -126,10 +126,18 @@ li header {
 }
 li a {
     /* Pick from my hair */
-    background-color: #a58d6f;
+    /* background-color: #a58d6f; */
     padding: 3px;
     font-size: 14px;
     color: white;
+    letter-spacing: 1px;
+    align-self: stretch; 
+}
+li footer{
+    background-color: #66696b;
+    padding: 3px;
+    font-size: 20px;
+    color: #66696b;
     letter-spacing: 1px;
     align-self: stretch;
 }
