@@ -106,11 +106,16 @@ ul {
     padding: 0px;
     display: grid;
 }
+/* Carousel */
 li {
+    display: none;
+}
+/* Old settings threw off carousel */
+/* li:nth-last-of-type(3) {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 li header {
     background-color: #66696b;
     padding: 3px;

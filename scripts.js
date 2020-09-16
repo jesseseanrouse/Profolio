@@ -6,6 +6,13 @@
 const viewArr = (array) => {
     console.log(array)
 }
+// To start the carousel
+let carousel = 1;
+const caraStart = () => {
+    $(`li:nth-of-type(1)`).css('display', 'flex');
+    $(`li:nth-of-type(1)`).css('flex-direction', 'column');
+    $(`li:nth-of-type(1)`).css('align-items', 'center');
+}
 
 // My attempt to create an array that sticks beyond the function
 // var googleArr = []
@@ -30,7 +37,8 @@ const addProject2Index = (projectsArr) => {
         let link = projectsArr[i].link;
 		$(`li:nth-of-type(${n})`).append(`<a href="${link}">Go to Site</a>`);
 		i++;
-	}
+    }
+    caraStart();
 };
 
 $.ajax({
@@ -54,7 +62,7 @@ $.ajax({
 );
 
 // w3schools format decided to go with it.
-$('i').on('click', () => {
+$('.navIcon').on('click', () => {
     let menu = document.getElementById("navLinks")
     if (menu.style.display === "flex") {
         menu.style.display = "none"
@@ -73,3 +81,47 @@ $('a').on('click', () => {
 })
 
 // viewArr(googleArr);
+
+// Carousel Javascript
+$('.prevCara').on('click', () => {
+    if (carousel === 1) {
+        carousel = 3;
+        $(`li:nth-of-type(1)`).css('display', 'none');
+        $(`li:nth-of-type(3)`).css('display', 'flex');
+        $(`li:nth-of-type(3)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(3)`).css('align-items', 'center');
+    } else if (carousel === 2) {
+        carousel = 1;
+		$(`li:nth-of-type(2)`).css('display', 'none'),
+        $(`li:nth-of-type(1)`).css('display', 'flex');
+        $(`li:nth-of-type(1)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(1)`).css('align-items', 'center');
+    } else if (carousel === 3) {
+        carousel = 2;
+        $(`li:nth-of-type(3)`).css('display', 'none'),
+        $(`li:nth-of-type(2)`).css('display', 'flex');
+        $(`li:nth-of-type(2)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(2)`).css('align-items', 'center');
+    }
+})
+$('.nextCara').on('click', () => {
+    if (carousel === 1) {
+        carousel = 2;
+        $(`li:nth-of-type(1)`).css('display', 'none'),
+		$(`li:nth-of-type(2)`).css('display', 'flex');
+		$(`li:nth-of-type(2)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(2)`).css('align-items', 'center');
+	} else if (carousel === 2) {
+        carousel = 3;
+        $(`li:nth-of-type(2)`).css('display', 'none');
+		$(`li:nth-of-type(3)`).css('display', 'flex');
+		$(`li:nth-of-type(3)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(3)`).css('align-items', 'center');
+	} else if (carousel === 3) {
+        carousel = 1;
+        $(`li:nth-of-type(3)`).css('display', 'none'),
+		$(`li:nth-of-type(1)`).css('display', 'flex');
+		$(`li:nth-of-type(1)`).css('flex-direction', 'column');
+		$(`li:nth-of-type(1)`).css('align-items', 'center');
+	}
+});
