@@ -253,7 +253,18 @@ $('.nextCara').on('click', () => {
 		}
     }
 });
+
 // Input Email
 $('form').on('submit', (event) => {
     event.preventDefault()
+})
+
+//How to fix a bug
+window.addEventListener('resize', () => {
+    let x = screen.width;
+    if (x > 1023) {
+        location.reload()
+    } else if (x > 499) {
+        location.reload();
+    }
 })

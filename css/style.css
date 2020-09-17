@@ -18,9 +18,15 @@ h2{
     font-family: 'MedievalSharp', cursive;
     padding: 375px 0px 125px 0px;
     color: white;
+    /* Giving a text border by abusing the text-shadow option */
+    /* did look it up but I understand whu at each point by testing */
+    text-shadow: -1px 0px #66696b, 0px -1px #66696b, 1px 0px #66696b, 0px 1px #66696b;
 }
 h1 {
     font-size: 40px;
+}
+header h2 { 
+    letter-spacing: 1px;
 }
 /* Nav Bar Settings */
 nav {
@@ -48,6 +54,7 @@ i {
     background-color: #3f4142;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 2px;
 }
 /* I looked this up... Took way too long to find this but it solved my nav bar location issue when jumping around my page */
 #aboutMeLink {
@@ -82,6 +89,7 @@ a{
 .amh {
     font-family: 'MedievalSharp', cursive;
     background-color: #b7c5ef;
+    text-shadow: -1px 0px #66696b, 0px -1px #66696b, 1px 0px #66696b, 0px 1px #66696b;
     padding: 17px;
 }
 .am1 {
@@ -100,6 +108,8 @@ a{
 .pHeader {
     font-family: 'MedievalSharp', cursive;
     background-color: #b7c5ef;
+    text-shadow: -1px 0px #66696b, 0px -1px #66696b, 1px 0px #66696b, 0px 1px #66696b;
+    letter-spacing: 1px;
     padding: 17px;
 }
 ul {
@@ -173,6 +183,8 @@ img {
 .cHeader {
     font-family: 'MedievalSharp', cursive;
     background-color: #b7c5ef;
+    text-shadow: -1px 0px #66696b, 0px -1px #66696b, 1px 0px #66696b, 0px 1px #66696b;
+    letter-spacing: 1px;
     padding: 17px;
 }
 .contactInfo {
