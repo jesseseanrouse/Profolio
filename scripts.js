@@ -41,8 +41,10 @@ const addProject2Index = (projectsArr) => {
         // Holy Code Batman I got it working
         let link = projectsArr[i].link;
         $(`li:nth-of-type(${n})`).append(`<a href="${link}"></a>`);
+        let imgDescription = projectsArr[i].description
         let $img = $('<img>');
-		$img.attr('src', projectsArr[i].image);
+        $img.attr('src', projectsArr[i].image);
+        $img.attr('title', imgDescription + " -Click to go to website")
         $(`li:nth-of-type(${n}) a`).append($img);
         $(`li:nth-of-type(${n})`).append('<footer>This is a footer</footer>')
         
