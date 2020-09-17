@@ -261,12 +261,27 @@ $('form').on('submit', (event) => {
     event.preventDefault()
 })
 
-//How to fix a bug
+//How to fix a bug 2.0
+const screenCheck = [0, 0, 0]
+const screenWidth = screen.width
+const screenWidthSettings = () => {
+    if (screenWidth > 1023) {
+        screenCheck[0] = 1
+    } else if (screenWidth > 499) {
+        screenCheck[1] = 1
+    } else {
+        screenCheck[2] = 1
+    }
+}
+screenWidthSettings();
+
 window.addEventListener('resize', () => {
     let x = screen.width;
-    if (x > 1023) {
+    if (x > 1023 && screenCheck[0] === 0) {
         location.reload()
-    } else if (x > 499) {
+    } else if (x > 499 && x < 1024 && screenCheck[1] === 0) {
+        location.reload();
+    } else if (x < 500 && screenCheck[2] === 0){
         location.reload();
     }
 })
