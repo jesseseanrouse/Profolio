@@ -67,13 +67,18 @@ i {
     top: -54px;
     visibility: hidden;
 }
+#quotesLink {
+    position: relative;
+    top: -54px;
+    visibility: hidden;
+}
 #contactLink {
     position: relative;
     top: -54px;
     visibility: hidden;
 }
 /* Figured out that I needed place these settings here instead of above */
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -176,6 +181,55 @@ li footer{
 img {
     width: 90%;
 }
+/* Quotes Settings */
+.qHeader {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #b7c5ef;
+    text-shadow: -1px 0px #66696b, 0px -1px #66696b, 1px 0px #66696b, 0px 1px #66696b;
+    letter-spacing: 1px;
+    padding: 17px;
+}
+.quotesList {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+.carouselQuotes {
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    grid-template-rows: 1fr;
+}
+.carouselQuotes ul {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 200px;
+}
+.carouselQuotes button{
+    opacity: .1;
+    grid-row: 1 / 2;
+    height: 80%;
+    align-self: center;
+}
+.prevCaraQuote{
+    grid-column: 1 / 2;
+}
+.nextCaraQuote {
+    grid-column: 3 / 4;
+}
+.carouselQuotes li {
+    flex-direction: column;
+    justify-content: center;
+}
+#quotes p {
+    
+}
+#quotes footer {
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
 /* Contact Me Settings */
 #contact {
     background-color: #66696b;
