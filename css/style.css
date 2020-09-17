@@ -212,3 +212,15 @@ form input:nth-of-type(4){
     letter-spacing: 1px;
     grid-column: 1 / 2;
 }
+#submitPerson {
+    font-size: 18px;
+    margin: 10px 0px 0px 50px;
+    padding: 4px;
+    font-family: 'Dancing Script', cursive;
+    background-color: white;
+    border-top: 3px solid #b7c5ef;
+    border-left: 3px solid #b7c5ef;
+    border-bottom: 3px solid #707e9e;
+    border-right: 3px solid #707e9e;
+    letter-spacing: 2px;
+}
