@@ -203,7 +203,7 @@ img {
 .carouselQuotes ul {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    height: 250px;
+    height: 275px;
 }
 .carouselQuotes button{
     opacity: .1;
