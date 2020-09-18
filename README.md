@@ -7,7 +7,7 @@
 |Day 2| Core Application Structure (HTML, CSS, etc.) | *[x]
 |Day 4| MVP & Bug Fixes | *[x]
 |Day 5| Final Touches | *[x]
-|Day 5| Present | *[ ]
+|Day 5| Present | *[x]
 
 ### Description
 I'm am going for simple first. Get the information there, get a color scheme going, and just have a clean profolio; just a well done profolio fist. Then work on jazzing it up in stages and giving more and more of a Jesse flair.
