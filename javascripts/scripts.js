@@ -25,9 +25,14 @@ const caraStart = () => {
     }
 }
 // new carousel/Quotes code
-let carouselQuote = 1
-const carouselStartQuote = () => {
-    $(`.quotesList li:nth-of-type(1)`).css('display', 'flex');
+const carouselStartQuote = (x) => {
+    y = Math.floor(Math.random() * x);
+    // doesn't work if y = 0 in the nth-of-type below
+    if (y === 0) {
+        y = 1
+    }
+    carouselQuote = y
+    $(`.quotesList li:nth-of-type(${y})`).css('display', 'flex');
 }
 const carouselQuotesPrev = (x) => {
     if (carouselQuote === 1) {
@@ -96,13 +101,14 @@ const addQuotes2Index = (quoteArr) => {
         $(`.quotesList li:nth-of-type(${n})`).append('<footer>' + '- ' + author + '</footer>');
         i++;
     }
-    carouselStartQuote();
+    carouselStartQuote(count);
     $('.nextCaraQuote').on('click', () => {
         carouselQuotesNext(count);
     })
     $('.prevCaraQuote').on('click', () => {
         carouselQuotesPrev(count);
     })
+    setInterval(() => carouselQuotesNext(count), 20000);
 }
 
 $.ajax({
