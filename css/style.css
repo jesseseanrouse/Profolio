@@ -141,10 +141,10 @@ li {
     height: 80%;
     align-self: center;
 }
-.prevCara{
+.prevCaraProjects {
     grid-column: 1 / 2;
 }
-.nextCara {
+.nextCaraProjects {
     grid-column: 3 / 4;
 }
 /* Old settings threw off carousel */

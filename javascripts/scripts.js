@@ -165,7 +165,7 @@ $('a').on('click', () => {
 // viewArr(googleArr);
 
 // Carousel Javascript
-$('.prevCara').on('click', () => {
+$('.prevCaraProjects').on('click', () => {
     let x = screen.width;
     if (x < 500) {
 		if (carousel === 1) {
@@ -239,7 +239,7 @@ $('.prevCara').on('click', () => {
 	}
     
 })
-$('.nextCara').on('click', () => {
+$('.nextCaraProjects').on('click', () => {
     let x = screen.width;
     if (x < 500) {
         if (carousel === 1) {
